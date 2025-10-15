@@ -109,15 +109,13 @@ Isso garante compatibilidade com os recursos mais recentes do JS no Node.js.
 
 ```json
 "scripts": {
-  "start": "node dist/server.js",
-  "dev": "nodemon --exec ts-node src/server.ts",
-  "build": "tsc"
+  "dev": "nodemon server.ts",
+  "basic": "nodemon basic.ts"
 }
 ```
 
 - `npm run dev` → Executa em modo desenvolvimento.  
-- `npm run build` → Compila o TypeScript para JavaScript.  
-- `npm start` → Roda o código compilado.
+- `npm run build` → Executa um arquivo de teste (apenas com alguns codigo base do node)
 
 ---
 
@@ -127,11 +125,10 @@ Isso garante compatibilidade com os recursos mais recentes do JS no Node.js.
 project/
 │
 ├── src/
-│   ├── server.ts
 │   └── ...
 │
 ├── dist/
-│
+├── server.ts  
 ├── tsconfig.json
 ├── package.json
 └── README.md
